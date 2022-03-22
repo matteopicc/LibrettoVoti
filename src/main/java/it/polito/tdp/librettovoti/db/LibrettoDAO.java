@@ -22,7 +22,7 @@ public class LibrettoDAO {
 		st.setString(1, v.getNome());
 		st.setInt(2, v.getPunti());
 		
-		int res = st.executeUpdate(sql);
+		int res = st.executeUpdate();
 		st.close();
 		
 		conn.close();

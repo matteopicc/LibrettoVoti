@@ -22,7 +22,7 @@ public class ProvaVoti {
 			st.setString(1, nome);
 			st.setInt(2, punti);
 			
-			int res = st.executeUpdate(sql);
+			int res = st.executeUpdate();
 			st.close();
 			conn.close();
 			if(res==1) {
@@ -53,7 +53,7 @@ public class ProvaVoti {
 			
 			while(res.next()) {
 				String nome = res.getString("nome");
-				int voto = res.getInt("voto");
+				int voto = res.getInt("punti");
 				System.out.println(nome +" "+voto);
 			}
 			

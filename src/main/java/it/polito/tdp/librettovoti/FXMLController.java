@@ -60,7 +60,7 @@ public class FXMLController {
     	}
     	txtNome.clear();
     	cmbPunti.setValue(null);
-    	txtStatus.setText("");
+    	
     	}
     	else {
     		txtStatus.setText("ERRORE: esame già presente");
