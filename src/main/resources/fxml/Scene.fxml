@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="txtStatus" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.librettovoti.FXMLController">
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.librettovoti.FXMLController">
    <top>
       <Label text="LIBRETTO VOTI" BorderPane.alignment="CENTER">
          <font>
@@ -40,7 +40,7 @@
                   <Label text="Nome Corso" />
                   <Label text="Voto" GridPane.rowIndex="1" />
                   <TextField fx:id="txtNome" GridPane.columnIndex="1" />
-                  <ComboBox fx:id="cmbPunti" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cmbPunti" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <Button mnemonicParsing="false" onAction="#handleNuovoVoto" text="Aggiungi" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                </children>
             </GridPane>
@@ -50,7 +50,4 @@
          </BorderPane.margin>
       </VBox>
    </center>
-   <bottom>
-      <Label fx:id="txtStatus" textFill="#d00d0d" BorderPane.alignment="CENTER" />
-   </bottom>
 </BorderPane>

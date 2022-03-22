@@ -3,6 +3,8 @@ package it.polito.tdp.librettovoti.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import it.polito.tdp.librettovoti.db.LibrettoDAO;
+
 public class Libretto {
 
 	private List<Voto> voti ;
@@ -12,13 +14,9 @@ public class Libretto {
 	}
 	
 	public boolean add(Voto v) {
-		if(!isDuplicato(v) && !isConflitto(v)) {
-		this.voti.add(v);
-		return true;
-		}
-		else {
-			return false;
-		}
+		LibrettoDAO dao= new LibrettoDAO();
+		boolean result = dao.creaVoto(v);
+		return result;
 	}
 	
 	public Libretto filtraPunti(int punti) {
@@ -67,7 +65,8 @@ public class Libretto {
 	}
 	
 	public List<Voto>getVoti(){
-		return this.voti;
+		LibrettoDAO dao = new LibrettoDAO();
+		return dao.readAllVoto();
 	}
 	
 	public Libretto votiMigliorati() {
@@ -98,7 +97,7 @@ public class Libretto {
 		}
 	}
 	
-	public String toString() {
-		return this.voti.toString() ;
-	}
+//	public String toString() {
+//		return this.voti.toString() ;
+//	}
 }
