@@ -84,7 +84,7 @@ public class Libretto {
 			}
 			
 			//v.setPunti(punti) NOOOOOOOOOOOOOOOOOOOOOOOOOOOO(punta nella lista del libretto vecchio e modifica pure quello)
-			nuovo.add(new Voto(v.getNome(),punti));
+			nuovo.add(new Voto(v.getNome(),punti,v.getData()));
 		}
 		return nuovo;
 	}
